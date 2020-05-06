@@ -1,6 +1,6 @@
 // UNCOMMENT THE LINES BELOW
-// const cmd = require('chronos-microservice-debugger3');
-// cmd.propagate();
+const cmd = require('chronos-microservice-debugger3');
+cmd.propagate();
 
 const PORT = 3000;
 const express = require('express');
@@ -15,7 +15,7 @@ const customers = 'http://localhost:5555';
 const orders = 'http://localhost:7777';
 
 // UNCOMMENT THE LINE BELOW AND PASS IN YOUR CHOSEN ARGUMENTS
-// app.use('/', cmd.microCom('microserviceName', 'databaseType', 'databaseURL', 'wantMicroHealth', 'queryFrequency'))
+app.use('/', cmd.microCom('reverse-proxy', 'mongo', 'mongodb+srv://alon:testing123@cluster0-phsei.mongodb.net/test?retryWrites=true&w=majority', 'yes', 'm'))
 
 app.use(cors());
 app.use('/', express.static('../reverse\ proxy/'));
