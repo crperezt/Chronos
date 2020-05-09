@@ -18,6 +18,8 @@ CustomerController.createcustomer = (req, res, next) => {
 
 //  This middleware gets all the customers
 CustomerController.getcustomers = (req, res, next) => {
+  console.log('req header in CUSTOMERS server:', req.headers);
+
   CustomerModel.find({}, (error, result) => {
     if (error) {
       console.log(`Customer could not be found in database ${error}`);
@@ -43,6 +45,8 @@ CustomerController.deletecustomer = (req, res, next) => {
 
 //  This middleware gets all the books from the books database by sending a request to the books server
 CustomerController.getbooksinfo = (req, res, next) => {
+  console.log('req header in CUSTOMERS server (before going to BOOKS):', req.headers);
+
   fetch('http://localhost:4545/books/getbooks', {
     method: 'GET',
     headers: {

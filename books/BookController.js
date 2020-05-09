@@ -22,6 +22,8 @@ BookController.createBook = (req, res, next) => {
 
 // This middleware gets all the books
 BookController.getBooks = (req, res, next) => {
+  console.log('req header in BOOKS server (came from CUSTOMERS):', req.headers);
+
   BookModel.find({}, (err, result) => {
     if (err) {
       return res.status(404).json(err);
