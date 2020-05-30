@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
 // UNCOMMENT THE LINE BELOW AND REPLACE WITH AN ACTUAL MONGODB URI FOR YOUR "CUSTOMERS" DATABASE
-const myURI = 'mongodb+srv://alon:testing123@cluster0-nmd6a.mongodb.net/Customers';
+const myURI = '{YOUR_DB_FOR_CUSTOMERS_SERVICE}';
 
 mongoose.connect(myURI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('Connected!!!********* Customer Database is live!!!'))

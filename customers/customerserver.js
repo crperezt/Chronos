@@ -11,7 +11,7 @@ const bodyParser = require('body-parser');
 const controller = require('./CustomerController.js');
 
 // UNCOMMENT THE LINE BELOW AND PASS IN YOUR CHOSEN ARGUMENTS
-app.use('/', cmd.microCom('customers', 'mongo', 'mongodb+srv://alon:testing123@cluster0-phsei.mongodb.net/test?retryWrites=true&w=majority', 'yes', 'm'))
+app.use('/', cmd.microCom('customers', 'mongo', '{YOUR_DB_URI_HERE}', 'yes', 'm'))
 
 app.use(bodyParser.json());
 app.use(cors());

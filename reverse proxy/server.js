@@ -15,7 +15,7 @@ const customers = 'http://localhost:5555';
 const orders = 'http://localhost:7777';
 
 // UNCOMMENT THE LINE BELOW AND PASS IN YOUR CHOSEN ARGUMENTS
-app.use('/', cmd.microCom('reverse-proxy', 'mongo', 'mongodb+srv://alon:testing123@cluster0-phsei.mongodb.net/test?retryWrites=true&w=majority', 'yes', 'm'))
+app.use('/', cmd.microCom('reverse-proxy', 'mongo', '{YOUR_DB_URI_HERE}', 'yes', 'm'))
 
 app.use(cors());
 app.use('/', express.static('../reverse\ proxy/'));
